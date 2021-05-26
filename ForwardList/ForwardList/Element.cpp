@@ -7,11 +7,6 @@
 
 #include <stdio.h>
 #include "Element.h"
-#include <iostream>
-using namespace std;
-using std::cin;
-using std::cout;
-using std::endl;
 #define tab "\t"
 #define DELIMETER "\n----------------------------------\n"
 #undef DEBUG

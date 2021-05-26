@@ -8,14 +8,18 @@
 #ifndef Iterator_h
 #define Iterator_h
 #pragma once
-#include <iostream>
-using namespace std;
-using std::cin;
-using std::cout;
-using std::endl;
-template <typename T>class Iterator;
-template <typename T>class ForwardList;
-template <typename T>class Element;
+//#include <iostream>
+//using namespace std;
+//using std::cin;
+//using std::cout;
+//using std::endl;
+//template <typename T>class Iterator;
+//template <typename T>class ForwardList;
+//template <typename T>class Element;
+
+#include"Element.h"
+
+
 template <typename T>
 class Iterator
 {

@@ -8,8 +8,12 @@
 #include <iostream>
 #include<exception>
 #include "Element.h"
+#include "Element.cpp"
 #include "Iterator.h"
+#include "Iterator.cpp"
 #include "ForwardList.h"
+#include "ForwardList.cpp"
+
 using namespace std;
 using std::cin;
 using std::cout;
@@ -159,7 +163,7 @@ int main()
 //    }
 //    list.print();
 //    ForwardList list3=list;
-    ForwardList<double>df1 = {2.5, 2.87, 3.14, 5.9, 8.2};
+    ForwardList<double>df1 = {3.14,2.5, 2.87, 3.14, 5.9, 8.2};
     for(double i : df1)cout << i << tab; cout << endl;
     ForwardList<std::string> stih = {"хорошо", "живет", "на","свете","Винни-Пух"};
     for(std::string i : stih)cout << i << tab; cout << endl;

@@ -12,8 +12,7 @@
 #define tab "\t"
 #define DELIMETER "\n----------------------------------\n"
 #undef DEBUG
-template <typename T>class Iterator;
-template <typename T>class Element;
+
 
 template <typename T>
 unsigned int ForwardList<T>::get_size()const
@@ -31,7 +30,7 @@ Iterator<T> ForwardList<T>::begin()
     return Head;
 }
 template <typename T>
-Iterator<T> end()
+Iterator<T> ForwardList<T>::end()
 {
     return nullptr;
 }
@@ -103,7 +102,7 @@ ForwardList<T>& ForwardList<T>::operator=(const ForwardList<T>& other)
     return *this;
 }
 template <typename T>
-ForwardList<T>& ForwardList<T>::operator=(ForwardList<T>&& other)
+ForwardList<T>& ForwardList<T>::operator=(ForwardList&& other)
 {
     while(Head)pop_front();
     this->size = other.size;
