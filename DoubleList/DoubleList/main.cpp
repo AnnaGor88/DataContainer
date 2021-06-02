@@ -4,6 +4,9 @@
 //
 //  Created by Анна Горячева on 28.05.2021.
 //
+#include <iostream>
+using namespace std;
+
 class DoubleList;
 class Element
 {
@@ -20,14 +23,14 @@ public:
     {
         return Data;
     }
-    Element(int Data, Element* pNext=nullptr):Data(Data),pNext(pNext)
+    Element(int Data, Element* pNext=nullptr,Element* pPrew=nullptr):Data(Data),pNext(pNext),pPrew(pPrew)
     {
         count++;
     }
     ~Element()
     {
         count--;
-//        cout << "EDestructor:\t" << this << endl;
+        cout << "EDestructor:\t" << this << endl;
     }
     friend class DoubleList;
 };
@@ -41,25 +44,26 @@ public:
     {
         return size;;
     }
+    const Element* getHead()const
+    {
+        return Head;
+    }
     DoubleList()
     {
         this->size=0;
-        this->Head=nullptr; // nullptr в Headозначает,что список пуст
-       // cout << "DLConstructor:\t" << this << endl;
+        this->Head=nullptr;
+        cout << "DLConstructor:\t" << this << endl;
     }
     ~DoubleList()
     {
         while(Head)
         {
-            Tail=Head->pNext;
-            delete Head;
-            Head=Tail;
+            //pop_front();
         }
     }
+    
 };
 
-#include <iostream>
-using namespace std;
 int main() {
     setlocale (LC_ALL, "");
     
