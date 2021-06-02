@@ -111,11 +111,11 @@ public:
     }
     ReverseIterator rend()
     {
-        return Head;
+        return nullptr;
     }
    const  ReverseIterator rend()const
     {
-        return Head;
+        return nullptr;
     }
     class Iterator
     {
